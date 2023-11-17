@@ -1,0 +1,125 @@
+.img-fluid{
+  
+    width: 60%;
+    height: 70%;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+
+.popup-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.9);
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+ .popup-image span{
+position:absolute;
+top:0; right:10px;
+font-size:40px;
+font-weight:bolder;
+color:#fff;
+cursor:pointer;
+z-index:100;
+}
+
+.popup-image img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 5px solid #fff;
+  border-radius: 5px;
+  max-width: 90%;
+  max-height: 90%;
+  width: auto;
+  height: auto;
+  object-fit: cover;
+}
+
+.popup-image .slider-container {
+  position: relative;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+  
+  .popup-image .prev-btn, .popup-image .next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  .popup-image .prev-btn {
+    left: 0;
+  }
+  
+  .popup-image .next-btn {
+    right: 0;
+  }
+
+@media screen and (max-width: 768px) {
+
+ 
+  
+    
+    .popup-image img{
+        position:absolute;
+        top:50%; left:50%;
+        transform: translate(-50%, -50%);
+        border: 5px solid #fff;
+        border-radius: 5px;
+        max-width: 100%;
+        max-height: 100%;
+        width: auto;
+        height: auto;
+        object-fit: cover;
+    
+    }
+
+
+
+
+    .popup-image .slider-container {
+        padding: 20px; 
+        flex-direction: column; 
+        text-align: center;
+      }
+    
+      .popup-image .prev-btn, .popup-image .next-btn {
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        padding: 5px 10px; /* Adjust the size as needed */
+        cursor: pointer;
+        font-size: 16px; /* Adjust the font size as needed */
+      }
+    
+      .popup-image .prev-btn {
+        left: 10px;
+      }
+    
+      .popup-image .next-btn {
+        right: 10px;
+      }
+    
+      .popup-image img {
+        width: 100%; 
+        height: auto; 
+      }
+  }
